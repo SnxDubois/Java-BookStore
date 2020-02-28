@@ -18,11 +18,11 @@
     <div class="container">
 
         <c:if test="${book != null}">
-            <form name="book_form" method="post" action="update"></form>
+            <form name="book_form" method="post" action="update">
         </c:if>
 
         <c:if test="${book == null}">
-            <form name="book_form" method="post" action="insert"></form>
+            <form name="book_form" method="post" action="insert">
         </c:if>
 
 
@@ -34,6 +34,7 @@
                 New Book Form
             </c:if>
         </h2>
+
         <p><label>Title:</label>
             <c:if test="${book != null}">
                 <input type="hidden" name="id" value="<c:out value='${book.id}' />" />
